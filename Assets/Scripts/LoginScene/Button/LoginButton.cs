@@ -49,6 +49,9 @@ public class LoginButton : MonoBehaviour
                 MyInfo.Instance.UserId = loginResponseDto.UserId;
                 MyInfo.Instance.SessionId = loginResponseDto.SessionId;
 
+                ServerConfig.MatchServer = loginResponseDto.MatchServerAddress;
+                ServerConfig.GameServer = loginResponseDto.GameServerAddress;
+
                 SceneManager.LoadScene("MatchScene");
             }
         }
