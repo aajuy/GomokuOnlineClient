@@ -1,5 +1,5 @@
 # GomokuOnlineClient
-온라인 오목 게임 [GomokuOnline](https://github.com/aajuy/GomokuOnlineServer)의 클라이언트입니다.
+온라인 오목 게임 GomokuOnline의 클라이언트입니다. ([GomokuOnlineServer](https://github.com/aajuy/GomokuOnlineServer))
 
 ## 게임 화면
 <img width="962" alt="Client_Login" src="https://github.com/aajuy/GomokuOnlineClient/assets/88243441/d64bbe8d-baff-45f3-bef6-f5d8e338e89c">
