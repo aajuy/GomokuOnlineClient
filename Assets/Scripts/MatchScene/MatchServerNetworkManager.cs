@@ -22,7 +22,7 @@ public class MatchServerNetworkManager : MonoBehaviour
         //IPAddress iPAddr = ipHost.AddressList[0];
         //IPEndPoint endPoint = new IPEndPoint(iPAddr, 6789);
 
-        IPAddress iPAddress = IPAddress.Parse(ServerConfig.MatchServer);
+        IPAddress iPAddress = IPAddress.Parse(ServerConfig.MatchServerAddress);
         IPEndPoint endPoint = new IPEndPoint(iPAddress, 6789);
 
         Socket socket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);

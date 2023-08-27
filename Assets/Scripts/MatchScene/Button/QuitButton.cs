@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 
 public class QuitButton : MonoBehaviour
 {
-    string baseUri = ServerConfig.LoginServer;  // TODO
+    string baseUri = ServerConfig.LoginServerAddress;  // TODO
 
     public void OnClick()
     {

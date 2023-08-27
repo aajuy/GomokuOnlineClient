@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ServerConfig : MonoBehaviour
 {
-    public static string LoginServer { get; set; } = "http://";
-    public static string MatchServer { get; set; } = "";
-    public static string GameServer { get; set; } = "";
+    public static string LoginServerAddress { get; set; } = "http://";
+    public static string MatchServerAddress { get; set; }
+    public static string GameServerAddress { get; set; }
 }
