@@ -939,6 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 2141722462}
+  buttonText: {fileID: 1016077236}
   networkManager: {fileID: 1301448204}
 --- !u!1 &2111914753
 GameObject:

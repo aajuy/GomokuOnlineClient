@@ -7,6 +7,7 @@ public class MatchButton : MonoBehaviour
 {
     bool waiting = false;
     public TMP_Text currentState;
+    public TMP_Text buttonText;
     public MatchServerNetworkManager networkManager;
 
     public void OnClick()
@@ -15,12 +16,14 @@ public class MatchButton : MonoBehaviour
         {
             waiting = false;
             currentState.text = string.Empty;
+            buttonText.text = "Join Match";
             Cancel();
         }
         else
         {
             waiting = true;
             currentState.text = "Waiting...";
+            buttonText.text = "Cancel";
             Join();
         }
     }
