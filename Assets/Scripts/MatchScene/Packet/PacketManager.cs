@@ -19,6 +19,8 @@ namespace Assets.Scripts.MatchScene.Packet
         {
             packetMakers.Add((ushort)PacketId.SReady, MakePacket<S_Ready>);
             packetHandlers.Add((ushort)PacketId.SReady, PacketHandler.S_ReadyHandler);
+            packetMakers.Add((ushort)PacketId.SResponse, MakePacket<S_Response>);
+            packetHandlers.Add((ushort)PacketId.SResponse, PacketHandler.S_ResponseHandler);
         }
 
         // [size(2)][packetId(2)][...]
