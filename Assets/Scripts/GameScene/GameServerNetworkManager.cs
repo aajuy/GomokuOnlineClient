@@ -23,7 +23,7 @@ namespace Assets.Scripts.GameScene
             //IPAddress iPAddr = ipHost.AddressList[0];
             //IPEndPoint endPoint = new IPEndPoint(iPAddr, 5678);
 
-            IPAddress ipAddr = IPAddress.Parse(ServerConfig.GameServer);
+            IPAddress ipAddr = IPAddress.Parse(ServerConfig.GameServerAddress);
             IPEndPoint endPoint = new IPEndPoint(ipAddr, 5678);
 
             Socket socket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);

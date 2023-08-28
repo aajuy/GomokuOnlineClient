@@ -11,7 +11,7 @@ public class LoginButton : MonoBehaviour
     public TMP_InputField UsernameInputField;
     public TMP_InputField PasswordInputField;
     public TMP_Text ResponseText;
-    string baseUri = ServerConfig.LoginServer;  // TODO
+    string baseUri = ServerConfig.LoginServerAddress;  // TODO
 
     public void OnClick()
     {
@@ -48,6 +48,9 @@ public class LoginButton : MonoBehaviour
 
                 MyInfo.Instance.UserId = loginResponseDto.UserId;
                 MyInfo.Instance.SessionId = loginResponseDto.SessionId;
+
+                ServerConfig.MatchServerAddress = loginResponseDto.MatchServerAddress;
+                ServerConfig.GameServerAddress = loginResponseDto.GameServerAddress;
 
                 SceneManager.LoadScene("MatchScene");
             }
