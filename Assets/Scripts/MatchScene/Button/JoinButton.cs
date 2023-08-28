@@ -5,25 +5,26 @@ using UnityEngine;
 
 public class MatchButton : MonoBehaviour
 {
-    bool waiting = false;
+    //bool waiting = false;
     public TMP_Text currentState;
     public TMP_Text buttonText;
     public MatchServerNetworkManager networkManager;
 
     public void OnClick()
     {
-        if (waiting)
+        if (MyInfo.Instance.Waiting)
         {
-            waiting = false;
+            Cancel();
+            //waiting = false;
+            MyInfo.Instance.Waiting = false;
             currentState.text = string.Empty;
             buttonText.text = "Join Match";
-            Cancel();
         }
         else
         {
-            waiting = true;
-            currentState.text = "Waiting...";
-            buttonText.text = "Cancel";
+            //waiting = true;
+            //currentState.text = "Waiting...";
+            //buttonText.text = "Cancel";
             Join();
         }
     }
