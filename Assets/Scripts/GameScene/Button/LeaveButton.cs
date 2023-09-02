@@ -1,6 +1,5 @@
 using Assets.Scripts.GameScene;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LeaveButton : MonoBehaviour
 {
@@ -15,6 +14,6 @@ public class LeaveButton : MonoBehaviour
             session.Disconnect();
         }
 
-        SceneManager.LoadScene("MatchScene");
+        LoadingSceneController.LoadScene("MatchScene");
     }
 }

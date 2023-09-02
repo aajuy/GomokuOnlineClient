@@ -7,6 +7,7 @@ public class MyInfo
 
     public int UserId { get; set; }
     public string SessionId { get; set; }
+    public string Username { get; set; }
     public DateTime LastStaminaUpdateTime { get; set; }
     public int Stamina { get; set; } = -1;
     public bool Waiting { get; set; } = false;
