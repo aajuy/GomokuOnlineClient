@@ -27,5 +27,16 @@ namespace Assets.Scripts.MatchScene.Packet
                 MyInfo.Instance.Waiting = true;
             }
         }
+
+        public static void S_ResponseHandler(PacketSession session, IMessage packet)
+        {
+            S_Response sResponsePacket = packet as S_Response;
+            ServerSession serverSession = session as ServerSession;
+
+            if (sResponsePacket.Successed)
+            {
+                MyInfo.Instance.Waiting = true;
+            }
+        }
     }
 }

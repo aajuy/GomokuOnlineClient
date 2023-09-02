@@ -22,7 +22,7 @@ public class LoginButton : MonoBehaviour
         StartCoroutine(Login(loginRequestDto));
     }
 
-    // TODO: го╣Е дз╣Ы а╕╟е
+    // TODO: ц┤ц▐б╣ц╔ ц└ц б╣ц╧ ц│б╕б╟ц┘
     IEnumerator Login(LoginRequestDto loginRequestDto)
     {
         string uri = baseUri + "/login";
