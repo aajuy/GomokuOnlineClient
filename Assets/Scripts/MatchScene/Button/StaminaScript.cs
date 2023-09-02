@@ -34,9 +34,6 @@ public class StaminaScript : MonoBehaviour
 
                 GetStaminaResponseDto getStaminaResponseDto = JsonSerializer.Deserialize<GetStaminaResponseDto>(www.downloadHandler.text, options);
 
-                Debug.Log(getStaminaResponseDto.LastStaminaUpdateTime);
-                Debug.Log(getStaminaResponseDto.Stamina);
-                Debug.Log(DateTime.UtcNow);
                 MyInfo.Instance.LastStaminaUpdateTime = getStaminaResponseDto.LastStaminaUpdateTime;
                 MyInfo.Instance.Stamina = getStaminaResponseDto.Stamina;
             }

@@ -1,7 +1,6 @@
 ﻿using Google.Protobuf;
 using Google.Protobuf.MatchProtocol;
 using NetworkLibrary;
-using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.MatchScene.Packet
 {
@@ -15,7 +14,7 @@ namespace Assets.Scripts.MatchScene.Packet
             MyInfo.Instance.RoomId = sReadyPacket.RoomId;
 
             session.Disconnect();
-            SceneManager.LoadScene("GameScene");
+            LoadingSceneController.LoadScene("GameScene");
         }
 
         public static void S_ResponseHandler(PacketSession session, IMessage packet)

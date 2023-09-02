@@ -4,7 +4,6 @@ using System.Text.Json;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
 
 public class LoginButton : MonoBehaviour
 {
@@ -48,11 +47,12 @@ public class LoginButton : MonoBehaviour
 
                 MyInfo.Instance.UserId = loginResponseDto.UserId;
                 MyInfo.Instance.SessionId = loginResponseDto.SessionId;
+                MyInfo.Instance.Username = loginRequestDto.Username;
 
                 ServerConfig.MatchServerAddress = loginResponseDto.MatchServerAddress;
                 ServerConfig.GameServerAddress = loginResponseDto.GameServerAddress;
 
-                SceneManager.LoadScene("MatchScene");
+                LoadingSceneController.LoadScene("MatchScene");
             }
         }
     }
